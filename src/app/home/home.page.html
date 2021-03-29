@@ -1,20 +1,31 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
+<ion-header>
+  <ion-toolbar color="dark">
     <ion-title>
-      Blank
+      Bin2Dec
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <div class="container">
+    <form [formGroup]="form" class="ion-padding">
+      <ion-item class="input">
+        <ion-label position="floating">Digite um binário</ion-label>
+        <ion-input type="text" formControlName="binary" (ionChange)="changeValue()"></ion-input>
+      </ion-item>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+      <ion-item class="input">
+        <ion-label position="fixed">Resultado</ion-label>
+        <ion-input type="text" formControlName="result" readOnly></ion-input>
+      </ion-item>
+    </form>
   </div>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar color="dark">
+    <ion-title>
+      App Ideas/Florin Pop
+    </ion-title>
+  </ion-toolbar>
+</ion-footer>
